@@ -1,5 +1,5 @@
 // Offline cache for the web version. VERSION is replaced at build time.
-const CACHE = "compagnon-0.1.2";
+const CACHE = "compagnon-0.2.0";
 const FILES = ["./", "index.html", "manifest.webmanifest", "icon-180.png", "icon-192.png", "icon-512.png"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
